@@ -1,0 +1,22 @@
+{
+  "name": "arbcore-pro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Next-generation crypto arbitrage infrastructure powered by AI, smart contracts and real-time execution systems.",
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web & npm run dev:api",
+    "dev:web": "npm --workspace apps/web run dev",
+    "dev:api": "npm --workspace apps/api run dev",
+    "build": "npm run build:web && npm run build:api",
+    "build:web": "npm --workspace apps/web run build",
+    "build:api": "npm --workspace apps/api run build"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
